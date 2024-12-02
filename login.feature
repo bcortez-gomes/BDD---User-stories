@@ -11,7 +11,7 @@
             Cenário: Autenticação válida
             Quando eu digitar o usuário "usuarioqueexiste@gmail.com"
             E a senha "senhaexistente66"
-            Então deve exibir a tela de checkout
+            Então deve exibir uma mensagem de checkout
 
             Cenário: Autenticação inválida
             Quando eu digitar o usuário "usuarioquenaoexiste@gmail.com"
@@ -23,13 +23,13 @@
             E a senha "senhainexistente99"
             Então deve exibir mensagem de alerta: "Senha incorreta"
 
-            Cenário: Autenticação válida
+            Esquema do Cenário: Autenticação válida
             Quando eu digitar o usuário <usuario>
             E a senha <senha>
-            Então deve exibir a tela de checkout
+            Então deve exibir uma <mensagem> de checkout
 
             Exemplos:
-            | usuário                         | senha                | exibe    |
-            | "usuarioqueexiste@gmail.com"    | "senhaexistente66"   | checkout |
-            | "usuarioquenaoexiste@gmail.com" | "senhainexistente99" | alerta   |
-            | "usuarioqueexiste@gmail.com"    | "senhainexistente99" | alerta   |
+            | usuário                         | senha                | mensagem  |
+            | "usuarioqueexiste@gmail.com"    | "senhaexistente66"   | checkout  |
+            | "usuarioquenaoexiste@gmail.com" | "senhainexistente99" | alerta    |
+            | "usuarioqueexiste@gmail.com"    | "senhainexistente99" | alerta    |
